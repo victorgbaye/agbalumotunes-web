@@ -4,7 +4,9 @@ import styles from './Navigation.module.scss'
 const Navigation = () => {
   return (
     <div className={styles.NavigationWrapper}>
-        <section></section>
+        <section  className={styles.NavigationPageTitle}>
+            <h4>Discover</h4>
+        </section>
         <section></section>
         <section className={styles.NavigationCTA}>
             <Button

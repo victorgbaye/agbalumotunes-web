@@ -2,6 +2,7 @@ import Button from '../../UI/Button/Button'
 import styles from './AlbumCard.module.scss'
 import FTPlay from '../../../assets/FTPlay.svg'
 import Cash from '../../../assets/Cash.svg'
+import ellipsis2 from '../../../assets/elipsis2.svg'
 export const AlbumCard = () => {
   return (
     <main className={styles.AlbumCardWrapper}>
@@ -62,6 +63,23 @@ export const FeaturedTrack = () =>{
         <img src={Cash}/>
         <img src={FTPlay}/>
       </section>
+    </main>
+  )
+}
+
+export const PlaylistCard = () =>{
+  return (
+    <main className={styles.AlbumCardWrapper}>
+        <section className={styles.AlbumCardImage}>
+
+        </section>
+        <section className={styles.PlaylistInfo}>
+          <div className={styles.AlbumInfo}>
+              <h4>Chillin</h4>
+              <p>24 Songs</p>
+          </div>
+          <img src={ellipsis2}/>
+        </section>
     </main>
   )
 }
