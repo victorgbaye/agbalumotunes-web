@@ -1,0 +1,40 @@
+.SectionWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    h4{
+        color:#FFF;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px; /* 133.333% */
+        letter-spacing: 0.09px;
+    }
+}
+
+.FeaturedAlbumsWrapper{
+    display: flex;
+    gap: 20px;
+}
+
+.WeeklyTopWrapper{
+        // display: grid;
+        // grid-template-columns: repeat(auto-fit, minmax(min(25rem, 100%), 1fr));
+        // // place-items: center;
+        // // padding-top: 20px;
+        // gap: 20px;
+        // flex-grow: 1;
+        display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        gap: 20px;
+        // align-items: stretch;
+        // flex-direction: column;
+        
+}
+
+.FeaturedArtistWrapper{
+    display: flex;
+    gap: 20px;
+}

@@ -1,0 +1,20 @@
+.tableWrapper{
+    display: flex;
+    // border-collapse: collapse;
+
+    .tableHeader{
+        display: flex;
+        gap: 20px;
+        p{
+            width: 200px;
+        }
+    }
+    // th,td{
+    //     display: flex;
+    //     flex-direction: row;
+    //     padding: 1rem;
+    //     text-align: left;
+    //     min-width: 200px;
+    //     // gap: 20px;
+    // }
+}

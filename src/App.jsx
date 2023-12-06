@@ -1,13 +1,11 @@
 import './App.css'
-import { AlbumCard, ArtistCard, FeaturedTrack } from './component/compound/AlbumCard/Cards'
+import Discover from './pages/Discover/Discover'
 
 function App() {
 
   return (
     <>
-      <AlbumCard/>
-      <ArtistCard/>
-      <FeaturedTrack/>
+      <Discover/>
     </>
   )
 }
