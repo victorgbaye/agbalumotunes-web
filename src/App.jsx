@@ -1,13 +1,13 @@
 import './App.css'
 import Discover from './pages/Discover/Discover'
-import Playlist from './pages/Playlist/Playlist'
+// import Playlist from './pages/Playlist/Playlist'
 
 function App() {
 
   return (
     <>
-      {/* <Discover/> */}
-      <Playlist/>
+      <Discover/>
+      {/* <Playlist/> */}
     </>
   )
 }

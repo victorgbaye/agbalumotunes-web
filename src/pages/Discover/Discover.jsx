@@ -5,7 +5,7 @@ import styles from './Discover.module.scss'
 
 const Discover = () => {
   return (
-    <div>
+    <div style={{paddingTop:'80px'}}>
         <Navigation/>
         <Announcement/>
         <section className={styles.SectionWrapper}>

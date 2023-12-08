@@ -12,9 +12,12 @@
     // max-width: calc((100% - 60px) / 5);
 
 }
+.AlbumCardWrapper:hover{
+    border: 1px solid #EF6B16;
+}
 .AlbumCardImage{
     width: 100%;
-    height: 252px;
+    height: 180px;
     background-color: blue;
     border-radius: 4px;
 }

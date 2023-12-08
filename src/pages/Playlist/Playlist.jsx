@@ -4,12 +4,14 @@ import Button from '../../component/UI/Button/Button'
 import plus from '../../assets/plus.svg'
 import shuffle from '../../assets/shuffle.svg'
 import orangePlay from '../../assets/orangePlay.svg'
+import search from '../../assets/search.svg'
 import Navigation from '../../component/compound/Navigation/Navigation'
+import { Input } from '../../component/UI/input/Input'
 const Playlist = () => {
   return (
-    <div>
+    <div style={{paddingTop:'80px'}}>
         <Navigation/>
-        <section>
+        <section className={styles.PlaylistNav}>
             <div className={styles.PlaylistCTA}>
                 <Button
                 label={<p style={{display:'flex', gap:'8px'}}><img src={plus}/>Create playlist</p>}
@@ -24,8 +26,19 @@ const Playlist = () => {
                 style={{background:'none', border:'none'}}
                 />
             </div>
+            <div style={{color:'white'}} className={styles.search}>
+                <img src={search}/>
+                <div style={{ flex:1}}>
+                    <Input
+                    placeholder='Search by song, artist or genre'
+                    style={{background:'transparent', border:'none', flex:1, color:'white'}}
+                    />
+                </div>
+            </div>
         </section>
-        <PlaylistCard/>
+        <section className={styles.PlaylistCardContainer}>
+            <PlaylistCard/>
+        </section>
     </div>
   )
 }
