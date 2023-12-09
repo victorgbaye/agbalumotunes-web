@@ -1,0 +1,66 @@
+.AuthWrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+
+}
+.AuthFlexContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    width: 400px;
+   
+   
+}
+.AuthPageHeader{
+    h5{
+        color: var(--others-white, #FFF);
+        /* Headings/Heading 4 */
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px; /* 133.333% */
+        letter-spacing: 0.09px;
+    }
+}
+
+.LoginCTA{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    hr{
+        border: 1px solid #1B1E24;
+    }
+}
+
+.AuthFooter{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    h6{
+        color: var(--others-white, #FFF);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 142.857% */
+        letter-spacing: 0.07px;
+        span{
+            color: #EF6B16;
+        }
+    }
+    p{
+        text-decoration: underline;
+        color: var(--neutral-text-secondary, #CCC);
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 166.667% */
+        letter-spacing: 0.06px;
+        text-decoration-line: underline;
+    }
+}
