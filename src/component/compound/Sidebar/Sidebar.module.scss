@@ -1,0 +1,28 @@
+.SidebarContainer{
+    width: 320px;
+    padding: 20px;
+    height: 100svh;
+    border-right: 1px solid #053334;
+    flex: 0 0 auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    // bottom: 0;
+}
+.SidebarLogo{
+    margin-bottom: 32px;
+}
+.SidebarListItemContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+.SidebarListItem{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px 8px 20px;
+    border-right: 4px solid orange;
+}

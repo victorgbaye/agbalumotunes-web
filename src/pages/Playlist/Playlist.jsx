@@ -7,38 +7,42 @@ import orangePlay from '../../assets/orangePlay.svg'
 import search from '../../assets/search.svg'
 import Navigation from '../../component/compound/Navigation/Navigation'
 import { Input } from '../../component/UI/input/Input'
+import Sidebar from '../../component/compound/Sidebar/Sidebar'
 const Playlist = () => {
   return (
-    <div style={{paddingTop:'80px'}}>
-        <Navigation/>
-        <section className={styles.PlaylistNav}>
-            <div className={styles.PlaylistCTA}>
-                <Button
-                label={<p style={{display:'flex', gap:'8px'}}><img src={plus}/>Create playlist</p>}
-                style={{background:'#EF6B16', border:'1px solid #EF6B16'}}
-                />
-                <Button
-                label={<p style={{display:'flex', gap:'8px'}}><img src={orangePlay}/>Play</p>}
-                style={{background:'none', border:'none'}}
-                />
-                <Button
-                label={<p style={{display:'flex', gap:'8px'}}><img src={shuffle}/>Shuffle</p>}
-                style={{background:'none', border:'none'}}
-                />
-            </div>
-            <div style={{color:'white'}} className={styles.search}>
-                <img src={search}/>
-                <div style={{ flex:1}}>
-                    <Input
-                    placeholder='Search by song, artist or genre'
-                    style={{background:'transparent', border:'none', flex:1, color:'white'}}
+    <div className={styles.PageWrapper}>
+        <Sidebar/>
+        <div className={styles.contentWrapper}>
+            <Navigation/>
+            <section className={styles.PlaylistNav}>
+                <div className={styles.PlaylistCTA}>
+                    <Button
+                    label={<p style={{display:'flex', gap:'8px'}}><img src={plus}/>Create playlist</p>}
+                    style={{background:'#EF6B16', border:'1px solid #EF6B16'}}
+                    />
+                    <Button
+                    label={<p style={{display:'flex', gap:'8px'}}><img src={orangePlay}/>Play</p>}
+                    style={{background:'none', border:'none'}}
+                    />
+                    <Button
+                    label={<p style={{display:'flex', gap:'8px'}}><img src={shuffle}/>Shuffle</p>}
+                    style={{background:'none', border:'none'}}
                     />
                 </div>
-            </div>
-        </section>
-        <section className={styles.PlaylistCardContainer}>
-            <PlaylistCard/>
-        </section>
+                <div style={{color:'white'}} className={styles.search}>
+                    <img src={search}/>
+                    <div style={{ flex:1}}>
+                        <Input
+                        placeholder='Search by song, artist or genre'
+                        style={{background:'transparent', border:'none', flex:1, color:'white'}}
+                        />
+                    </div>
+                </div>
+            </section>
+            <section className={styles.PlaylistCardContainer}>
+                <PlaylistCard/>
+            </section>
+        </div>
     </div>
   )
 }

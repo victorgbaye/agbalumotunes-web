@@ -1,7 +1,23 @@
+.PageWrapper{
+    // display: flex;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: auto 1fr; 
+    position: absolute;
+}
+.contentWrapper{
+    // width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 320px;
+    padding-top: 80px;
+}
 .PlaylistNav{
+    width: 100%;
+    // flex: 1;
     display: flex;
     align-items: center;
-    // width: 100%;
     justify-content: space-between;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -11,6 +27,9 @@
 }
 .PlaylistCTA{
     display: flex;
+    // flex: 1;
+    // width: 100vw;
+    flex: auto;
     
 
 }
@@ -22,7 +41,8 @@
     border: 1px solid #1B1E24;
     background: #050717;
     padding: 10px;
-    width: 457px;
+    // width: 457px;
+    flex: auto;
     max-height: 40px;
 }
 .PlaylistCardContainer{

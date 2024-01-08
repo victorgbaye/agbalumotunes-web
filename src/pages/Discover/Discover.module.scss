@@ -1,4 +1,18 @@
+.PageWrapper{
+    // display: flex;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: auto 1fr; 
+    position: absolute;
+}
+.contentWrapper{
+    flex: 1;
+    margin-left: 320px;
+    padding-top: 80px;
+    width: 100%;
+}
 .SectionWrapper{
+    width: auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -14,8 +28,12 @@
 }
 
 .FeaturedAlbumsWrapper{
+    // width: 100vw;
     display: flex;
     gap: 20px;
+    // overflow: scroll;
+    // overflow-x: auto;
+    // white-space: nowrap;
 }
 
 .WeeklyTopWrapper{
