@@ -1,32 +1,29 @@
-import { AlbumCard, ArtistCard, FeaturedTrack } from '../../component/compound/AlbumCard/Cards'
+import Navigation from "../../component/compound/Navigation/Navigation"
+import Sidebar from "../../component/compound/Sidebar/Sidebar"
 import Announcement from '../../component/compound/Announcement/Announcement'
-import Navigation from '../../component/compound/Navigation/Navigation'
-import Sidebar from '../../component/compound/Sidebar/Sidebar'
+import { AlbumCard, ArtistCard, FeaturedTrack } from "../../component/compound/AlbumCard/Cards"
 import styles from './Discover.module.scss'
 
 const Discover = () => {
   return (
-    <div className={styles.PageWrapper}>
+    <div className={styles.pageWrapper}>
         <Sidebar/>
-        <div className={styles.contentWrapper}>
+        <div>
             <Navigation/>
-            <Announcement/>
-            <section className={styles.SectionWrapper}>
-                <h4>Featured Albums</h4>
-                <div className={styles.FeaturedAlbumsWrapper}>
+            <div className={styles.contentWrapper}>
+                <Announcement/>
+                <section className={styles.sectionContainer}>
                     <AlbumCard/>
                     <AlbumCard/>
                     <AlbumCard/>
                     <AlbumCard/>
-                    {/* <AlbumCard/> */}
-                    {/* <AlbumCard/>
-                    <AlbumCard/> */}
-                    
-                </div>
-            </section>
-            <section className={styles.SectionWrapper}>
-                <h4>Weekly top 15</h4>
-                <div className={styles.WeeklyTopWrapper}>
+                    <AlbumCard/>
+                    <AlbumCard/>
+                    <AlbumCard/>
+                    <AlbumCard/>
+                    <AlbumCard/>
+                </section>
+                <section className={styles.FeaturedTrackContainer}>
                     <FeaturedTrack/>
                     <FeaturedTrack/>
                     <FeaturedTrack/>
@@ -39,21 +36,24 @@ const Discover = () => {
                     <FeaturedTrack/>
                     <FeaturedTrack/>
                     <FeaturedTrack/>
-                    <FeaturedTrack/>
-                    <FeaturedTrack/>
-                    <FeaturedTrack/>                
-                </div>
-            </section>
-            <section className={styles.SectionWrapper}>
-            <h4>Featured Artist</h4>
-                <div className={styles.FeaturedArtistWrapper}>
+                </section>
+                <section className={styles.sectionContainer}>
                     <ArtistCard/>
                     <ArtistCard/>
                     <ArtistCard/>
                     <ArtistCard/>
                     <ArtistCard/>
-                </div>
-            </section>
+                    <ArtistCard/>
+                    <ArtistCard/>
+                    <ArtistCard/>
+                    <ArtistCard/>
+                    <ArtistCard/>
+                    <ArtistCard/>
+                    <ArtistCard/>
+                    <ArtistCard/>
+                </section>
+            </div>
+
         </div>
     </div>
   )
