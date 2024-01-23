@@ -1,32 +1,19 @@
 import Navigation from "../../component/compound/Navigation/Navigation"
 import Sidebar from "../../component/compound/Sidebar/Sidebar"
+import Announcement from '../../component/compound/Announcement/Announcement'
 import { AlbumCard } from "../../component/compound/AlbumCard/Cards"
-import styles from './ArtistProfile.module.scss'
-import burna from '../../assets/burna.svg'
-import Button from "../../component/UI/Button/Button"
-const ArtistProfile = () => {
+import styles from './AlbumDirectory.module.scss'
+
+const AlbumDirectory = () => {
   return (
-    <div>
-      <div className={styles.pageWrapper}>
+    <div className={styles.pageWrapper}>
         <Sidebar/>
-        <div> 
+        <div>
             <Navigation/>
             <div className={styles.contentWrapper}>
-                <section className={styles.ArtistHeader}>
-                  <div >
-                    <img src={burna}/>
-                  </div>
-                  <div className={styles.ArtistDetails}>
-                    <h5>Burna Boy</h5>
-                    <p>Artist</p>
-                    <span></span>
-                  </div>
-                  <div>
-                    <Button label="Tip me" style={{background:'transparent', border: '1px solid #EF6B16'}}></Button>
-                  </div>
-                </section>
+                <Announcement/>
                 <div className={styles.sectionWrapper}>
-                    <p>{`Artist's Discography`}</p>
+                    <p>Related Albums</p>
                     <section className={styles.sectionContainer}>
                         <AlbumCard/>
                         <AlbumCard/>
@@ -43,8 +30,7 @@ const ArtistProfile = () => {
 
         </div>
     </div>
-    </div>
   )
 }
 
-export default ArtistProfile
+export default AlbumDirectory
