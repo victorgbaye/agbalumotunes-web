@@ -1,4 +1,4 @@
-import styles from './library.module.scss'
+import styles from './Library.module.scss'
 import { MusicData } from '../../utils/MusicData';
 
 const LibraryDataDisplay = () => {
