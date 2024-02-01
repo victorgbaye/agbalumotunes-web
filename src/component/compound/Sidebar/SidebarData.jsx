@@ -5,19 +5,19 @@ import playlistIcon from '../../../assets/playlistIcon.svg'
 export const SidsebarData = [
     {
         id: 1,
-        url: '/discover',
+        url: 'discover',
         text: 'Discover',
         icon: discoverIcon
     },
     {
         id: 2,
-        url: '/library',
+        url: 'library',
         text: 'Library',
         icon: libraryIcon
     },
     {
         id: 3,
-        url: '/playlist',
+        url: 'playlist',
         text: 'Playlist',
         icon: playlistIcon
     }

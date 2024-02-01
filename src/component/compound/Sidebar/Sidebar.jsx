@@ -1,6 +1,7 @@
 import { SidsebarData } from "./SidebarData"
 import styles from './Sidebar.module.scss'
 import logo from '../../../assets/agbalumotunesLogo.svg'
+import { Link } from "react-router-dom"
 
 const Sidebar = () => {
   return (
@@ -11,11 +12,15 @@ const Sidebar = () => {
         <section  className={styles.SidebarListItemContainer}>
             {SidsebarData.map((data)=>{
                 return(
-                    <main key={data.id}>  
-                        <div className={styles.SidebarListItem}>
-                            <img src={data.icon}/>
-                            <p>{data.text}</p>
-                        </div>
+                    <main key={data.id}>
+                        <Link to={`/${data.url}`}
+                        style={{textDecoration:'none', color:'inherit'}}
+                        >
+                            <div className={styles.SidebarListItem}>
+                                <img src={data.icon}/>
+                                <p>{data.text}</p>
+                            </div>
+                        </Link>
                     </main>
                 )
             })}

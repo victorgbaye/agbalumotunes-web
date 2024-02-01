@@ -22,12 +22,14 @@
     position: relative;
 }
 .ArtistDetails{
+    display: flex;
+    flex-direction: column;
     text-align: center;
     position: absolute;
     // top: 50%;
-    bottom: -40px;
+    bottom: 0px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0%);
     h5{
         color: var(--Primary-text, var(--Neutral-TextPrimary, #F5F5F5));
     font-size: 48px;
@@ -43,6 +45,20 @@
     font-weight: 400;
     line-height: 24px; /* 150% */
     letter-spacing: 0.272px;
+    }
+    .ArtistListensAndComments{
+        display: flex;
+        gap: 40px;
+        padding: 20px;
+        border-radius: 16px;
+        border: 1px solid #053334;
+        background: #03050E;
+        margin-top: 20px;
+        span{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
     }
 }
 .sectionWrapper{
@@ -65,3 +81,61 @@
     flex-wrap: wrap;
     gap: 20px;
 }
+
+
+// DATA DISPLAY
+.header{
+    display: flex;
+    height: 60px;
+    // padding: 8px 20px;
+    align-items: center;
+    // gap: 200px;
+    align-self: stretch;
+    border: 0px solid #14161C;
+    background: #050717;
+    p{
+        // border: 1px solid red;
+        width: 200px;
+    }
+    
+
+}
+.header > :first-child {
+    width: 320px;
+    // border: 1px solid green;
+  }
+  .header > :last-child {
+    flex: 1;
+  }
+.dataRow{
+    display: flex;
+    align-items: center;
+    // justify-content: space-evenly;
+    height: 60px;
+    border-bottom: 1px solid #1B1E24;
+
+    p{
+        color: var(--Primary-text, var(--Neutral-TextPrimary, #F5F5F5));
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 171.429% */
+        letter-spacing: 0.07px;
+    }
+    div{
+        // border:1px solid #2344d6;
+        width: 200px;
+        height: 44px;
+        display: flex;
+        place-items: center;
+    }
+}
+.dataRow > :first-child {
+    width: 320px;
+    // border: 1px solid green;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .dataRow > :last-child {
+    flex: 1;
+  }
