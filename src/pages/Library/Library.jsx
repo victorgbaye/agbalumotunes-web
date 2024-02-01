@@ -1,4 +1,4 @@
-import styles from './library.module.scss'
+import styles from './Library.module.scss'
 import Button from '../../component/UI/Button/Button'
 import shuffle from '../../assets/shuffle.svg'
 import play from '../../assets/play.svg'
