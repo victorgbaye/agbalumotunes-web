@@ -16,13 +16,35 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 100%;
     
 }
+.SidebarListItemGroup{
+    display: flex;
+    width: 100%;
+    padding: 8px 12px 8px 20px;
+    align-items: center;
+    // border: 1px solid red;
+    justify-content: space-between;
+    
+    height: 44px;
 
+}
+.active{
+    background: #10121A;
+    border-radius: 8px;
+}
 .SidebarListItem{
     display: flex;
-    align-items: center;
+    // align-items: center;
     gap: 8px;
-    padding: 8px 12px 8px 20px;
-    border-right: 4px solid orange;
+    // border-right: 4px solid orange;
+
+}
+.verticalLine{
+    border: 2px solid #EF6B16;
+    align-self: stretch;
+    border-radius: var(--XS, 4px);
+
+
 }

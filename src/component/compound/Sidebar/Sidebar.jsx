@@ -11,14 +11,18 @@ const Sidebar = () => {
         </div>
         <section  className={styles.SidebarListItemContainer}>
             {SidsebarData.map((data)=>{
+                const isActive = location.pathname === `/${data.url}`;
                 return(
                     <main key={data.id}>
                         <Link to={`/${data.url}`}
                         style={{textDecoration:'none', color:'inherit'}}
                         >
-                            <div className={styles.SidebarListItem}>
-                                <img src={data.icon}/>
-                                <p>{data.text}</p>
+                            <div className={`${styles.SidebarListItemGroup} ${isActive ? styles.active : ''}`}>
+                                <div className={styles.SidebarListItem}>
+                                    <img src={data.icon}/>
+                                    <p>{data.text}</p>
+                                </div>
+                                <div className={isActive ? styles.verticalLine: ''}></div>
                             </div>
                         </Link>
                     </main>
