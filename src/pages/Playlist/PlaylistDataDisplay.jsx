@@ -1,5 +1,8 @@
 import styles from './Playlist.module.scss'
 import { MusicData } from '../../utils/MusicData';
+import Button from '../../component/UI/Button/Button';
+import comment from '../../assets/comment.svg'
+import elipsisHorizontal from '../../assets/elipsisHorizontal.svg'
 
 const PlaylistDataDisplay = () => {
     const columns = ['Song & Album', 'Duration', ''];
@@ -18,7 +21,11 @@ const PlaylistDataDisplay = () => {
                             <p>{data.album}</p>
                         </div>
                         <div><p>{data.duration}</p></div>
-                        <div></div>
+                        <div className={styles.trackActions}>
+                            <Button label='Buy track' style={{border:'1px solid #053334', background:'none'}}></Button>
+                            <img src={comment} style={{cursor:'pointer'}}/>
+                            <img src={elipsisHorizontal} style={{cursor:'pointer'}}/>
+                        </div>
                     </div>
                 )
             })

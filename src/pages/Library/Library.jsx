@@ -7,6 +7,7 @@ import Navigation from '../../component/compound/Navigation/Navigation'
 import { Input } from '../../component/UI/input/Input'
 import Sidebar from '../../component/compound/Sidebar/Sidebar'
 import LibraryDataDisplay from './LibraryDataDisplay'
+
 const Library = () => {
   return (
     <div>

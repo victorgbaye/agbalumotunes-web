@@ -111,6 +111,11 @@
     align-items: flex-start;
   }
   .dataRow > :last-child {
-    flex: 1;
+    // flex: 1;
+    margin-left: auto;
   }
+.trackActions{
+    display: flex;
+    gap:20px;
 
+}

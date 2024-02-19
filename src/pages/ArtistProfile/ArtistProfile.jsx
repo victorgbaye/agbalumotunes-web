@@ -8,11 +8,16 @@ import listens from '../../assets/listens.svg'
 import comments from '../../assets/comments.svg'
 import Button from "../../component/UI/Button/Button"
 import ArtistProfileDataDisplay from "./ArtistProfileDataDisplay"
+import Modal from "../../component/compound/Modal/Modal"
+import { useState } from "react"
+import { Input } from "../../component/UI/input/Input"
 // import DataDisplay from "../../component/compound/DataDisplay/DataDisplay"
 // import { MusicData } from "../../utils/MusicData"
 
 const ArtistProfile = () => {
   // const columns = ['Song & Album', 'Duration', 'Price', ''];
+  const [tipModal, setTipModal] = useState(false)
+
   return (
     <div>
       <div className={styles.pageWrapper}>
@@ -40,7 +45,7 @@ const ArtistProfile = () => {
                   </div>
                   <div>
                     <Button label={<span style={{display:'flex', alignItems:'center', gap:'10px'}}><img src={tip}/><p>Tip me</p></span>}
-                     style={{background:'transparent', border: '1px solid #EF6B16'}}></Button>
+                     style={{background:'transparent', border: '1px solid #EF6B16'}} onClick={()=>setTipModal(true)}></Button>
                   </div>
                 </section>
                 <div className={styles.sectionWrapper}>
@@ -66,6 +71,12 @@ const ArtistProfile = () => {
 
         </div>
     </div>
+    {
+            tipModal &&
+            <Modal title='Tip' prompt='Input amount and Select a payment Method to give a tip to your favorite artist.' closeModal={()=>setTipModal(false)} buttonLabel='Tip' confirmColor='#EF6B16'>
+              <Input placeholder='e.g $5.99'></Input>
+            </Modal>
+        }
     </div>
   )
 }

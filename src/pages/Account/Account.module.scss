@@ -1,0 +1,59 @@
+.pageWrapper{
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+.contentWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    // max-width: calc(100vw - 216px);
+    // position: relative;
+    padding: 20px;
+    
+}
+.detailsSectioncontainer{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    // gap: calc((100vw - 20px) / 2);
+}
+
+.personalProfile{
+    width: 440px;
+    display: flex;
+    flex-direction: column;
+    // align-items: flex-start;
+    gap: 20px;
+    // position: absolute;
+}
+
+.cardDetails{
+    width: 440px;
+    display: flex;
+    flex-direction: column;
+    // align-items: flex-start;
+    gap: 20px;
+    // position: absolute;
+}
+.cardDetailsInfo{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+    border-radius: 8px;
+    border: 1px solid #1B1E24;
+    background: #03050E;
+}
+.cardInfoContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+.cardInfoFlex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}

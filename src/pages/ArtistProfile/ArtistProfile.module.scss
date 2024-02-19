@@ -111,8 +111,12 @@
     display: flex;
     align-items: center;
     // justify-content: space-evenly;
-    height: 60px;
+    min-height: 60px;
+    // height: fit-content;
     border-bottom: 1px solid #1B1E24;
+    padding: 8px 0;
+
+
 
     p{
         color: var(--Primary-text, var(--Neutral-TextPrimary, #F5F5F5));
@@ -137,5 +141,21 @@
     align-items: flex-start;
   }
   .dataRow > :last-child {
-    flex: 1;
+    // flex: 1;
+    margin-left: auto;
+
   }
+
+  .trackActions{
+    display: flex;
+    gap:20px;
+
+}
+// .songTitle{
+//     display: flex;
+//     flex-direction: column;
+// }
+// .songTitleAndImg{
+//     border: 1px solid red;
+
+// }
