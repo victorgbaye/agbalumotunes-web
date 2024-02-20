@@ -159,3 +159,20 @@
 //     border: 1px solid red;
 
 // }
+
+.tipModalContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    // align-items: center;
+}
+.tipCard{
+    border-radius: 8px;
+    border: 1px solid #1B1E24;
+    background: #03050E;
+    display: flex;
+    padding: var(--XL, 16px);
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}

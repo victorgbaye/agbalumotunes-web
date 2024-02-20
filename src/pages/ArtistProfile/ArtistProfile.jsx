@@ -74,7 +74,14 @@ const ArtistProfile = () => {
     {
             tipModal &&
             <Modal title='Tip' prompt='Input amount and Select a payment Method to give a tip to your favorite artist.' closeModal={()=>setTipModal(false)} buttonLabel='Tip' confirmColor='#EF6B16'>
-              <Input placeholder='e.g $5.99'></Input>
+              <main className={styles.tipModalContainer}>
+                <Input placeholder='e.g $5.99'></Input>
+                <div className={styles.tipCard}>
+                  <p>**** **** **** 1627</p>
+                </div>
+                <hr></hr>
+                <Button label="Add new card" style={{width:'100%', color:'#EF6B16', background:'rgba(255, 255, 255, 0.00)'}}/>
+              </main>
             </Modal>
         }
     </div>
