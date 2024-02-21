@@ -3,6 +3,7 @@ import Sidebar from "../../component/compound/Sidebar/Sidebar"
 import Announcement from '../../component/compound/Announcement/Announcement'
 import { AlbumCard, ArtistCard, FeaturedTrack } from "../../component/compound/AlbumCard/Cards"
 import styles from './Discover.module.scss'
+import MusicPlayer from "../../component/compound/MusicPlayer/MusicPlayer"
 
 const Discover = () => {
   return (
@@ -62,8 +63,8 @@ const Discover = () => {
                     </section>
                 </div>
             </div>
-
         </div>
+            <MusicPlayer/>
     </div>
   )
 }

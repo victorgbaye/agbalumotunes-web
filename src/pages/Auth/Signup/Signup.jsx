@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import styles from './Signup.module.scss'
-import { Input } from '../../../component/UI/input/Input';
+import { Input, SelectInput } from '../../../component/UI/input/Input';
 import Button from '../../../component/UI/Button/Button';
 import { Link } from 'react-router-dom';
 
 function Step1({ onNext }) {
+
   return (
     <div className={styles.AuthWrapper}>
       <div className={styles.AuthFlexContainer}>
@@ -17,8 +18,8 @@ function Step1({ onNext }) {
           type='email'
         />
         <Input
-          placeholder='Email'
-          type='email'
+          placeholder='Password'
+          type='password'
         />
         <div className={styles.LoginCTA}>
           <Button
@@ -40,6 +41,10 @@ Step1.propTypes = {
   onNext: PropTypes.func.isRequired,
 };
 function Step2({ onPrevious, onFinish }) {
+  const Genderoptions = [
+    { value: 'Male', label: 'Male' },
+    { value: 'Female', label: 'Female' },
+  ];
   return (
       <div className={styles.AuthWrapper}>
       <div className={styles.AuthFlexContainer}>
@@ -54,6 +59,16 @@ function Step2({ onPrevious, onFinish }) {
           placeholder='Email'
           type='email'
         />
+        <p>Date of birth</p>
+        <div className={styles.dob}>
+          <Input placeholder='DD'/>
+          <Input placeholder='MM'/>
+          <Input placeholder='YYYY'/>
+        </div>
+       <SelectInput
+       label='Gender'
+       options={Genderoptions}
+       />
         <div className={styles.LoginCTA}>
           <Button
           label='Previous'
