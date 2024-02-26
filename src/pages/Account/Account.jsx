@@ -29,7 +29,7 @@ const Account = () => {
                         </div>
                     </div>
                 </section>
-                <section className={styles.detailsSectioncontainer}>
+                <section className={styles.detailsSectioncontainer2}>
                     <div style={{marginRight:'auto'}}>
                         <p>Payment details</p>
                     </div>

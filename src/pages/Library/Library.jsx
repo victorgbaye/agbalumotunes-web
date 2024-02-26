@@ -7,13 +7,14 @@ import Navigation from '../../component/compound/Navigation/Navigation'
 import { Input } from '../../component/UI/input/Input'
 import Sidebar from '../../component/compound/Sidebar/Sidebar'
 import LibraryDataDisplay from './LibraryDataDisplay'
+import MusicPlayer from '../../component/compound/MusicPlayer/MusicPlayer'
 
 const Library = () => {
   return (
     <div>
             <div className={styles.pageWrapper}>
             <Sidebar/>
-            <div>
+            <div style={{overflowY: 'auto', maxHeight: '100vh',}}>
             <Navigation/>
             <div className={styles.contentWrapper}>
                 <section className={styles.PlaylistNav}>
@@ -43,6 +44,7 @@ const Library = () => {
             </div>
             </div>
         </div>
+        <MusicPlayer/>
     </div>
   )
 }

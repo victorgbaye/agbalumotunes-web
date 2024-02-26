@@ -8,6 +8,7 @@ import { Input } from '../../component/UI/input/Input'
 import Sidebar from '../../component/compound/Sidebar/Sidebar'
 import Modal from '../../component/compound/Modal/Modal'
 import { useState } from 'react'
+import MusicPlayer from '../../component/compound/MusicPlayer/MusicPlayer'
 const Playlist = () => {
     const [isModal, setIsModal] = useState(false)
 
@@ -15,7 +16,7 @@ const Playlist = () => {
     <div>
         <div className={styles.pageWrapper}>
             <Sidebar/>
-            <div>
+            <div style={{overflowY: 'auto', maxHeight: '100vh',}}>
                 <Navigation/>
                 <div className={styles.contentWrapper}>
                     <section className={styles.PlaylistNav}>
@@ -27,7 +28,9 @@ const Playlist = () => {
                             />
                             {
                                 isModal &&
-                                <Modal confirmColor='#EF6B16' buttonLabel='Save'></Modal>
+                                <Modal title="Create playlist" confirmColor='#EF6B16' buttonLabel='Save' closeModal={()=>setIsModal(false)}>
+                                    <Input placeholder='Type playlist name here e.g Gym'/>
+                                </Modal>
                             }
                         </div>
                         <div style={{color:'white',  width:'40px'}} className={styles.search}>
@@ -46,6 +49,7 @@ const Playlist = () => {
                 </div>
             </div>
         </div>
+        <MusicPlayer/>
     </div>
   )
 }

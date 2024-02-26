@@ -9,6 +9,7 @@ import AlbumDirectory from './pages/AlbumDirectory/AlbumDirectory';
 import PlaylistSongs from './pages/Playlist/PlaylistSongs';
 import Library from './pages/Library/Library';
 import Account from './pages/Account/Account';
+import Comment from './pages/Comment/Comment';
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="/playlistsongs" element={ <PlaylistSongs/>}/>
           <Route path="/library" element={ <Library/>}/>
           <Route path="/account" element={ <Account/>}/>
+          <Route path="/comment" element={ <Comment/>}/>
 
 
 
