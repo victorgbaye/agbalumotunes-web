@@ -4,7 +4,6 @@ import Announcement from '../../component/compound/Announcement/Announcement'
 import { AlbumCard, ArtistCard, FeaturedTrack } from "../../component/compound/AlbumCard/Cards"
 import styles from './Discover.module.scss'
 import MusicPlayer from "../../component/compound/MusicPlayer/MusicPlayer"
-
 const Discover = () => {
   return (
     <div className={styles.pageWrapper}>
