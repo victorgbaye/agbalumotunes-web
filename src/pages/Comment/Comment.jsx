@@ -2,7 +2,6 @@
 
 import Navigation from "../../component/compound/Navigation/Navigation"
 import Sidebar from "../../component/compound/Sidebar/Sidebar"
-// import { AlbumCard } from "../../component/compound/AlbumCard/Cards"
 import styles from './Comment.module.scss'
 import burna from '../../assets/burna.svg'
 import tip from '../../assets/tip.svg'

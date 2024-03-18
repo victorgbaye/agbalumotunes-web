@@ -12,8 +12,7 @@ import Modal from "../../component/compound/Modal/Modal"
 import { useState } from "react"
 import { Input } from "../../component/UI/input/Input"
 import BackButton from "../../component/compound/BackButton/BackButton"
-// import DataDisplay from "../../component/compound/DataDisplay/DataDisplay"
-// import { MusicData } from "../../utils/MusicData"
+
 
 const ArtistProfile = () => {
   // const columns = ['Song & Album', 'Duration', 'Price', ''];
