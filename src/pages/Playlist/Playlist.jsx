@@ -1,5 +1,4 @@
 import styles from './Playlist.module.scss'
-import { PlaylistCard } from '../../component/compound/AlbumCard/Cards'
 import Button from '../../component/UI/Button/Button'
 import plus from '../../assets/plus.svg'
 import search from '../../assets/search.svg'
@@ -9,8 +8,27 @@ import Sidebar from '../../component/compound/Sidebar/Sidebar'
 import Modal from '../../component/compound/Modal/Modal'
 import { useState } from 'react'
 import MusicPlayer from '../../component/compound/MusicPlayer/MusicPlayer'
+import axios from 'axios';
+import PlaylistDisplay from './PlaylistDisplay'
+
 const Playlist = () => {
     const [isModal, setIsModal] = useState(false)
+    const [playlistName, setPlaylistName] = useState('');
+
+    const createPlaylist = async () => {
+        // Replace URL and data structure according to your API requirements
+        const apiUrl = 'https://agbalumotunes-server.onrender.com/api/v1/playlist';
+        try {
+            const response = await axios.post(apiUrl, {
+                title: playlistName,  // Adjust data structure as per your backend requirements
+            });
+            console.log('Playlist created:', response.data);
+            setIsModal(false); // Close modal on success
+            setPlaylistName('')
+        } catch (error) {
+            console.error('Error creating playlist:', error);
+        }
+    };
 
   return (
     <div>
@@ -28,8 +46,11 @@ const Playlist = () => {
                             />
                             {
                                 isModal &&
-                                <Modal title="Create playlist" confirmColor='#EF6B16' buttonLabel='Save' closeModal={()=>setIsModal(false)}>
-                                    <Input placeholder='Type playlist name here e.g Gym'/>
+                                <Modal title="Create playlist" confirmColor='#EF6B16' buttonLabel='Save' closeModal={()=>setIsModal(false)} onConfirm={createPlaylist}>
+                                    <Input placeholder='Type playlist name here e.g Gym'
+                                            value={playlistName}
+                                            onChange={(e) => setPlaylistName(e.target.value)}
+                                    />
                                 </Modal>
                             }
                         </div>
@@ -44,7 +65,7 @@ const Playlist = () => {
                         </div>
                     </section>
                     <section className={styles.PlaylistCardContainer}>
-                        <PlaylistCard/>
+                        <PlaylistDisplay/>
                     </section>
                 </div>
             </div>

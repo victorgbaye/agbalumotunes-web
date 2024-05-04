@@ -3,6 +3,8 @@ import styles from './AlbumCard.module.scss'
 import FTPlay from '../../../assets/FTPlay.svg'
 import Cash from '../../../assets/Cash.svg'
 import ellipsis2 from '../../../assets/elipsis2.svg'
+import PropTypes from 'prop-types';
+
 export const AlbumCard = () => {
   return (
     <main className={styles.AlbumCardWrapper}>
@@ -67,7 +69,7 @@ export const FeaturedTrack = () =>{
   )
 }
 
-export const PlaylistCard = () =>{
+export const PlaylistCard = ({title, songCount}) =>{
   return (
     <main className={styles.AlbumCardWrapper}>
         <section className={styles.AlbumCardImage}>
@@ -75,11 +77,15 @@ export const PlaylistCard = () =>{
         </section>
         <section className={styles.PlaylistInfo}>
           <div className={styles.AlbumInfo}>
-              <h4>Chillin</h4>
-              <p>24 Songs</p>
+              <h4>{title}</h4>
+              <p>{songCount} Songs</p>
           </div>
           <img src={ellipsis2}/>
         </section>
     </main>
   )
 }
+PlaylistCard.propTypes = {
+  title: PropTypes.string.isRequired,   // Indicates that `title` is a required string
+  songCount: PropTypes.number.isRequired // Indicates that `songCount` is a required number
+};
