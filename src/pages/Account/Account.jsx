@@ -52,7 +52,7 @@ const Account = () => {
 
                             }
                         </div>
-                        <Button label="Add card" style={{color:'#EF6B16', background:'transparent'}}/>
+                        <Button label="Add card" style={{color:'#EF6B16', background:'transparent'}}  onClick={()=> setIsModal(true)}/>
                     </div>
                 </section>
             </div>

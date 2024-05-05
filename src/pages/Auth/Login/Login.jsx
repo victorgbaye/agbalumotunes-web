@@ -4,12 +4,15 @@ import { Input } from '../../../component/UI/input/Input'
 import styles from './Login.module.scss'
 import { useState } from 'react'
 import api from '../../../utils/api'
+import { setUser } from '../../../features/auth/authSlice'
+import { useDispatch } from 'react-redux'; // Import useDispatch from react-redux
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate(); // Hook for redirecting to other routes
+  const dispatch = useDispatch();
 
   const handleLogin = async () => {
     if (!email || !password) {
@@ -24,9 +27,13 @@ const Login = () => {
       const response = await api.post('/auth/login', { email, password });
       // Assume the server responds with the token and perhaps user info
       console.log('Login successful:', response.data);
-
+      dispatch(setUser({
+        user: response.data.user,
+        token: response.data.token
+      }));
       // Save the token to localStorage or another place suitable for your app
-      localStorage.setItem('authToken', response.data.token);
+
+      localStorage.setItem('authToken', document.cookie);
 
       // Redirect to the home page or dashboard, as appropriate
       navigate('/'); // Update this path as necessary

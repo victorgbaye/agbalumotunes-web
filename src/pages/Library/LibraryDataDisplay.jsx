@@ -5,6 +5,7 @@ import comment from '../../assets/comment.svg'
 import elipsisHorizontal from '../../assets/elipsisHorizontal.svg'
 import Modal from '../../component/compound/Modal/Modal';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const LibraryDataDisplay = () => {
     const columns = ['Song & Album', 'Duration', ''];
@@ -38,7 +39,9 @@ const LibraryDataDisplay = () => {
     {
     buyTtrackModal &&
     <Modal title='Buy Track' prompt='Select a payment Method to add this to your library and enjoy timeless music' closeModal={()=>setBuyTrackModal(false)} buttonLabel='Pay 3.99' confirmColor='#EF6B16'>
-
+        <Link to="/account">
+            <Button label='Add new card' style={{ background:'#000003', color:'#EF6B16', width:'100%'}} onClick={()=>setBuyTrackModal(true)}></Button>
+        </Link>
     </Modal>
     }
 </div>

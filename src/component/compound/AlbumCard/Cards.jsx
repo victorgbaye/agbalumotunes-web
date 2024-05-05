@@ -24,6 +24,7 @@ export const AlbumCard = () => {
             <Button
             label='Buy now'
             style={{border:'1px solid #0F142B', background: '#0F142B'}}
+            
             />
         </section>
     </main>
