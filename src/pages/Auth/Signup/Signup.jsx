@@ -5,6 +5,8 @@ import PropTypes from 'prop-types';
 import styles from './Signup.module.scss';
 import { Input, SelectInput } from '../../../component/UI/input/Input';
 import Button from '../../../component/UI/Button/Button';
+import { useDispatch } from 'react-redux';
+import { setUser } from '../../../features/auth/authSlice'
 
 const API_URL = 'https://agbalumotunes-server.onrender.com/api/v1/auth/register'; // API endpoint
 
@@ -126,6 +128,8 @@ Step2.propTypes = {
 };
 
 function Signup() {
+  const dispatch = useDispatch();
+
   const [step, setStep] = useState(1);
   const [userInfo, setUserInfo] = useState({
     email: '',
@@ -155,6 +159,10 @@ function Signup() {
     try {
       const response = await axios.post(API_URL, userInfo);
       console.log('Signup Success:', response.data);
+      dispatch(setUser({
+        user: response.data.user,
+        token: response.data.token
+      }));
       navigate('/'); // Redirect to the homepage or dashboard after successful signup
     } catch (error) {
       console.error('Signup Failed:', error);
