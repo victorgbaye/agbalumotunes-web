@@ -59,7 +59,7 @@ const Playlist = () => {
                             <div style={{ flex:1,}}>
                                 <Input
                                 placeholder='Search by song, artist or genre'
-                                style={{background:'transparent', border:'none', flex:1, color:'white', width:'450px'}}
+                                style={{background:'transparent', border:'none', flex:1, color:'white'}}
                                 />
                             </div>
                         </div>
