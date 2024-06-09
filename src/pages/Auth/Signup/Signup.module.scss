@@ -74,3 +74,52 @@ hr{
     gap: var(--XL, 20px);
     align-self: stretch;
 }
+
+
+.signupProgressContainer{
+    display: flex;
+    // width: 400px;
+    padding: var(--MD, 12px) 0px;
+    align-items: flex-start;
+    gap: 22px;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+.signupProgress{
+    display: flex;
+    height: var(--XS, 8px);
+    // padding-right: 331px;
+    align-items: flex-start;
+    gap: 10px;
+    flex: 1 0 0;
+    border-radius: 8px;
+    border: 1px solid #1B1E24;
+    background: #1B1E24;
+}
+.signupProgress2{
+    display: flex;
+    height: var(--XS, 8px);
+    // padding-right: 331px;
+    align-items: flex-start;
+    gap: 10px;
+    flex: 1 0 0;
+    border-radius: 8px;
+    border: 1px solid #EF6B16;
+    background: #EF6B16;
+}
+.signUpHeaderFlex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p{
+        color: var(--Neutral-TextSecondary, #CCC);
+        /* Caption/Caption Regular */
+        // font-family: Inter;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px; /* 133.333% */
+        letter-spacing: 0.204px;
+    }
+}

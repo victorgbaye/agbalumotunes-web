@@ -14,6 +14,7 @@ export const Input = ({ type, placeholder, value, onChange, style, name }) => {
         className={styles.DefaultInputStyles}
         style={style}
         name={name}
+        autoComplete='off'
     />
     </div>
   )

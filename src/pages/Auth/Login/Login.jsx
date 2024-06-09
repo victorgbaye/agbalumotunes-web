@@ -6,6 +6,7 @@ import { useState } from 'react'
 import api from '../../../utils/api'
 import { setUser } from '../../../features/auth/authSlice'
 import { useDispatch } from 'react-redux'; // Import useDispatch from react-redux
+import logo from '../../../assets/agbalumotunesLogo.svg'
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -55,6 +56,7 @@ const Login = () => {
   };
   return (
     <div className={styles.AuthWrapper}>
+            <img src={logo} style={{maxWidth:'150px', display:'flex', margin:'0px auto'}}/>
         <div className={styles.AuthFlexContainer}>
             <section className={styles.AuthPageHeader}>
                 <h5>Log in</h5>
@@ -79,12 +81,12 @@ const Login = () => {
                 />
                 <Button
                 label='Forgot password'
-                style={{width:'100%', background:'rgba(255, 255, 255, 0.00)', color:'#CCC'}}
+                style={{width:'100%', background:'rgba(255, 255, 255, 0.00)', color:'#CCC', fontSize:'14px'}}
                 />
                  <hr></hr>
             </div>
             <section className={styles.AuthFooter}>
-            <h6>Dont have an account? <Link to='/signup'><span>Sign Up</span></Link></h6>
+            <h6>Dont have an account? <Link to='/signup' style={{textDecoration: 'none',  color:'#EF6B16'}}><span>Sign Up</span></Link></h6>
             <p>Terms of service</p>
             </section>
         </div>

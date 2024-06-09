@@ -7,6 +7,7 @@ import { Input, SelectInput } from '../../../component/UI/input/Input';
 import Button from '../../../component/UI/Button/Button';
 import { useDispatch } from 'react-redux';
 import { setUser } from '../../../features/auth/authSlice'
+import logo from '../../../assets/agbalumotunesLogo.svg'
 
 const API_URL = 'https://agbalumotunes-server.onrender.com/api/v1/auth/register'; // API endpoint
 
@@ -25,9 +26,17 @@ function Step1({ onNext, onUserInfoChange }) {
 
   return (
     <div className={styles.AuthWrapper}>
+      <img src={logo} style={{maxWidth:'150px', display:'flex', margin:'0px auto'}}/>
       <div className={styles.AuthFlexContainer}>
         <section className={styles.AuthPageHeader}>
-          <h5>Sign up</h5>
+        <div className={styles.signupProgressContainer}>
+          <span className={styles.signupProgress}></span>
+          <span className={styles.signupProgress}></span>
+        </div>
+          <div className={styles.signUpHeaderFlex}>
+            <h5>Sign up</h5>
+            <p>Step 1 of 2</p>
+          </div>
         </section>
         <Input placeholder='Email' type='email' value={email} onChange={(e) => setEmail(e.target.value)} />
         <Input placeholder='Password' type='password' value={password} onChange={(e) => setPassword(e.target.value)} />
@@ -36,7 +45,7 @@ function Step1({ onNext, onUserInfoChange }) {
           <hr />
         </div>
         <section className={styles.AuthFooter}>
-          <h6>Already have an account? <Link to='/login'>Login</Link></h6>
+          <h6>Already have an account? <Link to='/login'  style={{textDecoration: 'none', color:'#EF6B16'}}>Login</Link></h6>
           <p>Terms of service</p>
         </section>
       </div>
@@ -81,9 +90,17 @@ function Step2({ onPrevious, onFinish, onUserInfoChange }) {
 
   return (
     <div className={styles.AuthWrapper}>
+      <img src={logo} style={{maxWidth:'150px', display:'flex', margin:'0px auto'}}/>
       <div className={styles.AuthFlexContainer}>
         <section className={styles.AuthPageHeader}>
-          <h5>Sign up</h5>
+        <div className={styles.signupProgressContainer}>
+          <span className={styles.signupProgress2}></span>
+          <span className={styles.signupProgress}></span>
+        </div>
+        <div className={styles.signUpHeaderFlex}>
+            <h5>Sign up</h5>
+            <p>Step 2 of 2</p>
+          </div>
         </section>
         <Input placeholder='First name' type='text' value={firstname}
         onChange={(e) => {
@@ -113,7 +130,7 @@ function Step2({ onPrevious, onFinish, onUserInfoChange }) {
         </div>
         <hr />
         <section className={styles.AuthFooter}>
-          <h6>Already have an account? <Link to='/login'>Login</Link></h6>
+          <h6>Already have an account? <Link to='/login'  style={{textDecoration: 'none', color:'#EF6B16'}}>Login</Link></h6>
           <p>Terms of service</p>
         </section>
       </div>
