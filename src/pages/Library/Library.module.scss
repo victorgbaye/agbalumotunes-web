@@ -50,9 +50,11 @@
     border: 1px solid #1B1E24;
     background: #050717;
     padding: 10px;
-    // width: 457px;
+    max-width: 400px;
     flex: auto;
     max-height: 40px;
+    // border: 1px solid red;
+
 }
 .PlaylistCardContainer{
     padding: 20px;
